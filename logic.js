@@ -94,13 +94,13 @@ async function solve(sudoku, row, col) {
     for (var i = 1; i < 10; i++) {
         const res = await valid(sudoku, row, col, i);
         if (res) {
-            await delay();
+            //await delay();
             document.getElementById(String(row) + String(col)).value = i;
             sudoku[row][col] = i;
             const correct = await solve(sudoku, row, col + 1);
             if (correct)
                 return true;
-            await delay();
+            //await delay();
         }
     }
     sudoku[row][col] = 0;
