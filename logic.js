@@ -2,7 +2,7 @@ var a = 1800;
 var times;
 var strt = false;
 
-const speed = 15;
+const speed = 0;
 const delay = () => {
     return new Promise((resolve) => {
         setTimeout(() => resolve(), speed);
